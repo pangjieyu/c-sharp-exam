@@ -1,0 +1,26 @@
+﻿<Window x:Class="_2015exam.Color"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2015exam"
+        mc:Ignorable="d"
+        Title="Color" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="canvas1">
+            <Rectangle
+                    MouseLeftButtonUp="Rectangle_MouseLeftButtonUp"
+                    Width="353" Height="159" Stroke="Blue"
+                    StrokeThickness="10" RadiusX="30" RadiusY="20" Canvas.Left="200" Canvas.Top="115" >
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5" MappingMode="RelativeToBoundingBox" >
+                        <GradientStop Color="#FFFFD100" Offset="0.157"/>
+                        <GradientStop Color="#FF00FF80" Offset="0.859"/>
+                        <GradientStop Color="Magenta" Offset="0.494"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Canvas>
+    </Grid>
+</Window>

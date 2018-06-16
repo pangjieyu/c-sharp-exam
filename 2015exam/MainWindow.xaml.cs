@@ -154,13 +154,24 @@ namespace _2015exam
                 else
                 {
                     List<Student> temp = new List<Student>();
-                    foreach (var i in temp)
+                    foreach (var i in q)
                     {
                         temp.Add(i);
                     }
                     textbox2.Text = temp.Average(x => x.Score).ToString();
                 }
             }
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Color color = new Color();
+            color.Show();
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
