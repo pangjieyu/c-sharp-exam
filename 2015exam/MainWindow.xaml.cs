@@ -128,18 +128,37 @@ namespace _2015exam
 
         private void search_Click(object sender, RoutedEventArgs e)
         {
-            if(radioButton1.IsChecked == true)
+            if (radioButton1.IsChecked == true)
             {
                 var q = from i in students
                         where i.Sno.ToString() == textbox1.Text
                         select i;
-                if(q.Count() == 0)
+                if (q.Count() == 0)
                 {
                     MessageBox.Show("没有该学生");
                 }
                 else
                 {
                     textbox2.Text = q.First().Course.ToString() + "," + q.First().Score.ToString();
+                }
+            }
+            if (radioButton2.IsChecked == true)
+            {
+                var q = from i in students
+                        where i.Course.ToString() == textbox1.Text
+                        select i;
+                if (q.Count() == 0)
+                {
+                    MessageBox.Show("没有该课程");
+                }
+                else
+                {
+                    List<Student> temp = new List<Student>();
+                    foreach (var i in temp)
+                    {
+                        temp.Add(i);
+                    }
+                    textbox2.Text = temp.Average(x => x.Score).ToString();
                 }
             }
         }
